@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udp-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udp-server
+  template:
+    metadata:
+      labels:
+        app: udp-server
+    spec:
+      containers:
+        - name: udp-server
+          image: quay.io/nluaces/udp-server:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+              protocol: UDP

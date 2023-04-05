@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udp-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udp-client
+  template:
+    metadata:
+      labels:
+        app: udp-client
+    spec:
+      containers:
+        - name: udp-client
+          image: quay.io/nluaces/udp-client:latest
+          imagePullPolicy: Always
+      restartPolicy: OnFailure

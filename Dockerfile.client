@@ -1,0 +1,9 @@
+FROM golang:latest
+
+WORKDIR /app
+
+COPY client/client.go .
+
+RUN go build client.go
+
+CMD ["./client"]

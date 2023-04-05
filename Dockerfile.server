@@ -1,0 +1,9 @@
+FROM golang:latest
+
+WORKDIR /app
+
+COPY server/server.go .
+
+RUN go build server.go
+
+CMD ["./server"]
