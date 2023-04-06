@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: udp-client
-          image: quay.io/nluaces/udp-client:latest
+          image: quay.io/skupper/udp-client:latest
           imagePullPolicy: Always
       restartPolicy: OnFailure

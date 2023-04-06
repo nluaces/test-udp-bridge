@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: udp-server
-          image: quay.io/nluaces/udp-server:latest
+          image: quay.io/skupper/udp-server:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000

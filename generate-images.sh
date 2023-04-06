@@ -1,7 +1,7 @@
 #! /bin/sh
 
-podman build -t quay.io/nluaces/udp-server:latest -f Dockerfile.server
-podman build -t quay.io/nluaces/udp-client:latest -f Dockerfile.client
+podman build -t quay.io/skupper/udp-server:latest -f Dockerfile.server
+podman build -t quay.io/skupper/udp-client:latest -f Dockerfile.client
 
-podman push quay.io/nluaces/udp-server
-podman push quay.io/nluaces/udp-client
+podman push quay.io/skupper/udp-server
+podman push quay.io/skupper/udp-client
